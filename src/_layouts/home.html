@@ -1,0 +1,61 @@
+{% extends './base.html' %} {% block content %}
+<section class="hero">
+  <div class="hero__content">
+    <h1 class="hero__heading">{{ hero.title }}</h1>
+    <p class="hero__text">{{ hero.text }}</p>
+  </div>
+  <img class="hero__image" src="{{hero.image}}" alt="" />
+</section>
+
+<article
+  id="{{ 'navigation.values' | i18n }}"
+  class="[ values ] [ grid flow wrapper ]"
+>
+  <h2 class="values__title">{{values.title}}</h2>
+  <ul class="values__content">
+    <li class="value">
+      <div class="value__icon"></div>
+      <p class="value__text">{{ 'values.detail' | i18n }}</p>
+      <p class="value__text">{{ value.detail}}</p>
+    </li>
+    <li class="value">
+      <div class="value__icon"></div>
+      <p class="value__text">{{ 'values.experience' | i18n }}</p>
+      <p class="value__text">{{ value.experience }}</p>
+    </li>
+    <li class="value">
+      <div class="value__icon"></div>
+      <p class="value__text">{{ 'values.focus' | i18n }}</p>
+      <p class="value__text">{{ value.focus }}</p>
+    </li>
+    <li class="value">
+      <div class="value__icon"></div>
+      <p class="value__text">{{ 'values.transparent' | i18n }}</p>
+      <p class="value__text">{{ value.transparent }}</p>
+    </li>
+    <li class="value">
+      <div class="value__icon"></div>
+      <p class="value__text">{{ 'values.inter' | i18n }}</p>
+      <p class="value__text">{{ value.inter }}</p>
+    </li>
+    <li class="value">
+      <div class="value__icon"></div>
+      <p class="value__text">{{ 'values.results' | i18n }}</p>
+      <p class="value__text">{{ value.results }}</p>
+    </li>
+  </ul>
+</article>
+
+<article id="{{ 'navigation.focus' | i18n }}" class="focus">
+  <article class="product">
+    <h2>{{ 'focus.product' | i18n }}</h2>
+    <p>{{product.textA}}</p>
+    <p>{{product.textB}}</p>
+  </article>
+  <article class="progress">
+    <h2>{{ 'focus.progress' | i18n }}</h2>
+    <p>{{progress.textA}}</p>
+    <p>{{progress.textB}}</p>
+  </article>
+</article>
+{% endblock %}

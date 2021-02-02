@@ -6,17 +6,6 @@ const htmlMinTransform = require('./src/transforms/html-min-transform');
 const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = function (config) {
-  config.addPlugin(i18n, {
-    translations,
-    fallbackLocales: {
-      fr: 'en',
-    },
-  });
-
-  if (!isDev) {
-    config.addTransform('htmlmin', htmlMinTransform);
-  }
-
   config.setTemplateFormats([
     // Templates:
     'html',
@@ -31,15 +20,27 @@ module.exports = function (config) {
     'woff',
     'woff2',
   ]);
+
+  config.addPlugin(i18n, {
+    translations,
+    fallbackLocales: {
+      fr: 'en',
+    },
+  });
+
+  if (!isDev) {
+    config.addTransform('htmlmin', htmlMinTransform);
+  }
+
   config.addPassthroughCopy('static');
 
   return {
-    dir: {
-      markdownTemplateEngine: 'njk',
-      htmlTemplateEngine: 'njk',
-      dataTemplateEngine: 'njk',
-      passthroughFileCopy: true,
+    markdownTemplateEngine: 'njk',
+    htmlTemplateEngine: 'njk',
+    dataTemplateEngine: 'njk',
+    passthroughFileCopy: true,
 
+    dir: {
       input: 'src',
       output: 'public',
       includes: '_includes',

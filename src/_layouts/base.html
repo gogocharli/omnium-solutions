@@ -3,9 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Omnium Solutions</title>
   </head>
   <body>
-    {{ testText | safe }}
+    <div class="site-wrap">
+      <main id="main-content" tabindex="-1">
+        {% include "header.html" %} {%- block content %} {% endblock -%}
+      </main>
+    </div>
   </body>
 </html>
