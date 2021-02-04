@@ -5,6 +5,13 @@
     <p class="hero__text">{{ hero.text }}</p>
   </div>
   <img class="hero__image" src="{{hero.image}}" alt="" />
+  <form id="hero__form">
+    <label for="email-cta">
+      <p>Get in touch</p>
+      <input type="email" name="email-cta" id="email-cta" />
+    </label>
+    <button type="submit">Send</button>
+  </form>
 </section>
 
 <article
@@ -15,32 +22,32 @@
   <ul class="values__content">
     <li class="value">
       <div class="value__icon"></div>
-      <p class="value__text">{{ 'values.detail' | i18n }}</p>
+      <h3 class="value__title">{{ 'values.detail' | i18n }}</h3>
       <p class="value__text">{{ value.detail}}</p>
     </li>
     <li class="value">
       <div class="value__icon"></div>
-      <p class="value__text">{{ 'values.experience' | i18n }}</p>
+      <h3 class="value__title">{{ 'values.experience' | i18n }}</h3>
       <p class="value__text">{{ value.experience }}</p>
     </li>
     <li class="value">
       <div class="value__icon"></div>
-      <p class="value__text">{{ 'values.focus' | i18n }}</p>
+      <h3 class="value__title">{{ 'values.focus' | i18n }}</h3>
       <p class="value__text">{{ value.focus }}</p>
     </li>
     <li class="value">
       <div class="value__icon"></div>
-      <p class="value__text">{{ 'values.transparent' | i18n }}</p>
+      <h3 class="value__title">{{ 'values.transparent' | i18n }}</h3>
       <p class="value__text">{{ value.transparent }}</p>
     </li>
     <li class="value">
       <div class="value__icon"></div>
-      <p class="value__text">{{ 'values.inter' | i18n }}</p>
+      <h3 class="value__title">{{ 'values.inter' | i18n }}</h3>
       <p class="value__text">{{ value.inter }}</p>
     </li>
     <li class="value">
       <div class="value__icon"></div>
-      <p class="value__text">{{ 'values.results' | i18n }}</p>
+      <h3 class="value__title">{{ 'values.results' | i18n }}</h3>
       <p class="value__text">{{ value.results }}</p>
     </li>
   </ul>
@@ -48,14 +55,39 @@
 
 <article id="{{ 'navigation.focus' | i18n }}" class="focus">
   <article class="product">
-    <h2>{{ 'focus.product' | i18n }}</h2>
+    <h2 class="product__title">{{ 'focus.product' | i18n }}</h2>
     <p>{{product.textA}}</p>
     <p>{{product.textB}}</p>
   </article>
   <article class="progress">
-    <h2>{{ 'focus.progress' | i18n }}</h2>
+    <h2 class="progress__title">{{ 'focus.progress' | i18n }}</h2>
     <p>{{progress.textA}}</p>
     <p>{{progress.textB}}</p>
   </article>
 </article>
-{% endblock %}
+
+<article id="{{ 'navigation.tools' | i18n }}" class="tools">
+  <h2 class="tools__title">{{ 'tools' | i18n }}</h2>
+  <picture class="tools__image">
+    <img src="" alt="" />
+  </picture>
+  <div class="tools__content">
+    <p>{{ tools.mainText }}</p>
+    <p>{{ tools.textA }}</p>
+    <p>{{ tools.textB }}</p>
+  </div>
+</article>
+
+<article class="clients">
+  <h2 class="clients__title">{{ 'clients' | i18n }}</h2>
+  <ul class="slides">
+    {%- for client in caseStudies %}
+    <li class="slide">
+      <p class="slide__text">{{ client.description }}</p>
+    </li>
+    {# TODO include client.company svg #} {% endfor -%}
+  </ul>
+</article>
+
+{% set formImage = true %} {% set formResume = false %} {% include "form.html"
+%} {% endblock %}

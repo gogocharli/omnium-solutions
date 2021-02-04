@@ -1,4 +1,14 @@
 {
   "dir": "ltr",
-  "locale": "en"
+  "locale": "en",
+  "caseStudies": [
+    {
+      "company": "First Data",
+      "description": "Working with FirstData to capture a leading chunk of the sales processing market share in the province of Quebec."
+    },
+    {
+      "company": "C360HD",
+      "description": "Helping C360HD grow their business and reach a thousand direct sales from  September to December of last year."
+    }
+  ]
 }

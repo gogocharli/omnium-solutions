@@ -1,0 +1,102 @@
+<article class="form__container wrapper">
+  <h3 id="signup" class="[ form__title ] [ text-550 md:text-600 lg:text-700 ]">
+    <span class="form__subtitle">{{ 'form.subtitle' | i18n }}</span>
+    {{ 'form.title' | i18n }}
+  </h3>
+  <div class="outline-container">
+    <div class="form signup">
+      {% if formImage == 'true' %}
+      <div class="form__helper">
+        <div class="error">
+          {%- include "warning.svg" -%}
+          <template id="error-message">
+            <p class="[ message ] [ weight-bold text-500 ]"></p>
+            <p class="[ example ] [ text-200 ]"></p>
+          </template>
+        </div>
+        <img src="{{ signup.image }}" alt="" />
+      </div>
+      {% endif %}
+      <form
+        action="/{{ locale }}/signup-success"
+        name="signup"
+        method="POST"
+        data-netlify="true"
+        class="flow"
+      >
+        <div class="field" data-field="0">
+          <label for="fullName" class="text-300">
+            <span class="field-label">{{ 'form.name' | i18n }}</span>
+            <span class="label-icon">
+              {% include 'icons/error-icon.svg' %}
+            </span>
+          </label>
+          <input type="text" name="fullName" id="fullName" required />
+        </div>
+
+        {% if formResume == false %}
+        <div class="field" data-field="0">
+          <label for="company" class="text-300">
+            <span class="field-label">{{ 'form.company' | i18n }}</span>
+            <span class="label-icon">
+              {% include 'icons/error-icon.svg' %}
+            </span>
+          </label>
+          <input type="text" name="company" id="company" required />
+        </div>
+        {% endif %}
+
+        <div class="field" data-field="1">
+          <label for="email" class="text-300">
+            <span class="field-label">{{ 'form.email' | i18n }}</span>
+            <span class="label-icon">
+              {% include 'icons/error-icon.svg' %}
+            </span>
+          </label>
+          <input type="email" name="email" id="email" required />
+        </div>
+
+        <div class="field" data-field="2">
+          <label for="phone" class="text-300">
+            <span class="field-label">{{ 'form.phone' | i18n }}</span>
+            <span class="label-icon">
+              {% include 'icons/error-icon.svg' %}
+            </span>
+          </label>
+          <input
+            type="text"
+            inputmode="numeric"
+            pattern="[0-9]*"
+            name="phone"
+            id="phone"
+            required
+          />
+        </div>
+
+        {% if formResume == true %}
+        <div class="field file">
+          <label for="file" class="button" data-variant="secondary">
+            <span class="field-label">{{ 'form.upload' | i18n }}</span>
+          </label>
+          <input
+            class="visually-hidden"
+            type="file"
+            name="file"
+            id="file"
+            accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,.pdf"
+          />
+        </div>
+        {% endif %}
+
+        <input
+          type="submit"
+          class="button"
+          value="{{ 'form.submit' | i18n }}"
+        />
+      </form>
+    </div>
+    {% if formImage == true %}
+    <div class="form__outline"></div>
+    {% endif %}
+  </div>
+</article>
