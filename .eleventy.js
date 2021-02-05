@@ -13,14 +13,6 @@ module.exports = function (config) {
     'html',
     'njk',
     'md',
-    // Static Assets:
-    'css',
-    'jpeg',
-    'jpg',
-    'png',
-    'svg',
-    'woff',
-    'woff2',
   ]);
 
   config.addPlugin(i18n, {
@@ -36,7 +28,8 @@ module.exports = function (config) {
     config.addTransform('htmlmin', htmlMinTransform);
   }
 
-  config.addPassthroughCopy('static');
+  config.addPassthroughCopy('src/static');
+  config.addPassthroughCopy('src/assets');
 
   return {
     markdownTemplateEngine: 'njk',

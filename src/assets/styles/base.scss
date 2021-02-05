@@ -1,0 +1,12 @@
+// Import configuration from gorko
+// @import './config.scss';
+
+// Specify no CSS output for this file
+// $outputTokenCSS: false;
+// @import '/node_modules/gorko/gorko.scss';
+
+@import './fonts.scss';
+
+body {
+  background-color: darkgray;
+}
