@@ -1,5 +1,7 @@
 const i18n = require('eleventy-plugin-i18n');
 const translations = require('./src/_data/i18n/index');
+const pluginSEO = require('eleventy-plugin-seo');
+const seoOpts = require('./src/_data/seo.json');
 
 const htmlMinTransform = require('./src/transforms/html-min-transform');
 
@@ -27,6 +29,8 @@ module.exports = function (config) {
       fr: 'en',
     },
   });
+
+  config.addPlugin(pluginSEO, seoOpts);
 
   if (!isDev) {
     config.addTransform('htmlmin', htmlMinTransform);

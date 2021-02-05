@@ -1,0 +1,12 @@
+{
+  "title": "Omnium Solutions",
+  "description": "Improve your sales by delegating them to experts.",
+  "url": "https://solutions.omniumconcept.com",
+  "author": "Natasha",
+  "image": "static/seo.jpg",
+  "options": {
+    "titleStyle": "minimalistic",
+    "titleDivider": "|",
+    "imageWithBaseUrl": true
+  }
+}

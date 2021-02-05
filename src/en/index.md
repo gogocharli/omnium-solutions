@@ -1,5 +1,7 @@
 ---
 layout: 'home.html'
+excerpt: Surpass your sales targets.
+ogtype: website
 hero:
   title: Surpass your sales targets.
   text: Reach new markets, increase customer satisfaction, and grow your company by leaving sales to experts.
