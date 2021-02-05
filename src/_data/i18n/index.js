@@ -22,6 +22,10 @@ module.exports = {
     fr: 'english',
   },
   values: {
+    title: {
+      en: 'Why companies choose us',
+      fr: 'Nos valeurs principales',
+    },
     detail: {
       en: 'Detailed',
       fr: 'Méticuleux',

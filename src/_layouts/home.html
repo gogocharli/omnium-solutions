@@ -7,7 +7,7 @@
   <img class="hero__image" src="{{hero.image}}" alt="" />
   <form id="hero__form">
     <label for="email-cta">
-      <p>Get in touch</p>
+      <span>Get in touch</span>
       <input type="email" name="email-cta" id="email-cta" />
     </label>
     <button type="submit">Send</button>
@@ -18,7 +18,7 @@
   id="{{ 'navigation.values' | i18n }}"
   class="[ values ] [ grid flow wrapper ]"
 >
-  <h2 class="values__title">{{values.title}}</h2>
+  <h2 class="values__title">{{'values.title' | i18n }}</h2>
   <ul class="values__content">
     <li class="value">
       <div class="value__icon"></div>
@@ -68,9 +68,7 @@
 
 <article id="{{ 'navigation.tools' | i18n }}" class="tools">
   <h2 class="tools__title">{{ 'tools' | i18n }}</h2>
-  <picture class="tools__image">
-    <img src="" alt="" />
-  </picture>
+  {% include "illustrations/salesforce.svg" %}
   <div class="tools__content">
     <p>{{ tools.mainText }}</p>
     <p>{{ tools.textA }}</p>
@@ -85,7 +83,9 @@
     <li class="slide">
       <p class="slide__text">{{ client.description }}</p>
     </li>
-    {# TODO include client.company svg #} {% endfor -%}
+    {% set company = client.company %} {% if client.company == 'c360hd' %} {%
+    include "logos/c360hd-logo.svg" %} {% elif client.company == 'firstData' %}
+    {% include "logos/firstData-logo.svg" %} {% endif %} {% endfor -%}
   </ul>
 </article>
 
