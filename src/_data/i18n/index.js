@@ -21,6 +21,10 @@ module.exports = {
     en: 'français',
     fr: 'english',
   },
+  cta: {
+    en: 'Get in touch',
+    fr: 'Rentrez en contact',
+  },
   values: {
     title: {
       en: 'Why companies choose us',

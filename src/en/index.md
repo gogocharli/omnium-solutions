@@ -6,7 +6,7 @@ hero:
 value:
   detail: Our dedicated team of highly trained and performant consultants to represent your brand to new clients.
   experience: With over 16 years of experience in both B2B and B2C sales, we have developed innovative outreach methods.
-  focus: Our mission is to help you grow your company. As such we always aim to find and create the best opportunities
+  focus: Our mission is to help you grow your company. As such we always aim to find and create the best opportunities.
   transparent: Communication is primordial. We care about the feedback from our clients to foster a long-lasting partnership.
   inter: All of our consultants are proficient in at least two languages. Start selling to new audiences now.
   results: We don’t accept sales which are not up to our standards. Our top priority is the quality and lifetime value we bring.

@@ -4,10 +4,26 @@
     <h1 class="hero__heading">{{ hero.title }}</h1>
     <p class="hero__text">{{ hero.text }}</p>
   </div>
-  <img class="hero__image" src="{{hero.image}}" alt="" />
+
+  <picture>
+    <source
+      srcset="/static/illustrations/hero-img-large.svg"
+      media="(min-width: 65em)"
+    />
+    <source
+      srcset="/static/illustrations/hero-img-mid.svg"
+      media="(min-width: 50em)"
+    />
+    <img
+      src="/static/illustrations/hero-img-small.svg"
+      alt=""
+      class="hero__image"
+    />
+  </picture>
+
   <form id="hero__form">
     <label for="email-cta">
-      <span>Get in touch</span>
+      <span>{{ 'cta' | i18n }}</span>
       <input type="email" name="email-cta" id="email-cta" />
     </label>
     <button type="submit">Send</button>
@@ -21,32 +37,32 @@
   <h2 class="values__title">{{'values.title' | i18n }}</h2>
   <ul class="values__content">
     <li class="value">
-      <div class="value__icon"></div>
+      <div class="value__icon">{% include "icons/edit-icon.svg" %}</div>
       <h3 class="value__title">{{ 'values.detail' | i18n }}</h3>
       <p class="value__text">{{ value.detail}}</p>
     </li>
     <li class="value">
-      <div class="value__icon"></div>
+      <div class="value__icon">{% include "icons/work-icon.svg" %}</div>
       <h3 class="value__title">{{ 'values.experience' | i18n }}</h3>
       <p class="value__text">{{ value.experience }}</p>
     </li>
     <li class="value">
-      <div class="value__icon"></div>
+      <div class="value__icon">{% include "icons/filter-icon.svg" %}</div>
       <h3 class="value__title">{{ 'values.focus' | i18n }}</h3>
       <p class="value__text">{{ value.focus }}</p>
     </li>
     <li class="value">
-      <div class="value__icon"></div>
+      <div class="value__icon">{% include "icons/show-icon.svg" %}</div>
       <h3 class="value__title">{{ 'values.transparent' | i18n }}</h3>
       <p class="value__text">{{ value.transparent }}</p>
     </li>
     <li class="value">
-      <div class="value__icon"></div>
+      <div class="value__icon">{% include "icons/discovery-icon.svg" %}</div>
       <h3 class="value__title">{{ 'values.inter' | i18n }}</h3>
       <p class="value__text">{{ value.inter }}</p>
     </li>
     <li class="value">
-      <div class="value__icon"></div>
+      <div class="value__icon">{% include "icons/activity-icon.svg" %}</div>
       <h3 class="value__title">{{ 'values.results' | i18n }}</h3>
       <p class="value__text">{{ value.results }}</p>
     </li>
@@ -55,11 +71,13 @@
 
 <article id="{{ 'navigation.focus' | i18n }}" class="focus">
   <article class="product">
+    <img src="/static/illustrations/product.svg" alt="" />
     <h2 class="product__title">{{ 'focus.product' | i18n }}</h2>
     <p>{{product.textA}}</p>
     <p>{{product.textB}}</p>
   </article>
   <article class="progress">
+    <img src="/static/illustrations/progress.svg" alt="" />
     <h2 class="progress__title">{{ 'focus.progress' | i18n }}</h2>
     <p>{{progress.textA}}</p>
     <p>{{progress.textB}}</p>
@@ -90,4 +108,4 @@
 </article>
 
 {% set formImage = true %} {% set formResume = false %} {% include "form.html"
-%} {% endblock %}
+%} {% include "footer.html" %} {% endblock %}
