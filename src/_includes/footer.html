@@ -1,0 +1,17 @@
+{% if locale == 'en' %} {% set otherLocale = 'fr' %} {% set localeName =
+'français' %} {% else %} {% set otherLocale = 'en' %} {% set localeName =
+'english' %}{% endif %}
+<footer class="side-foot">
+  <div class="wrapper">
+    <nav class="site-foot__nav" aria-label="Secondary nav">
+      <ul class="">
+        <li>
+          <a href="{{locale}}/{{ 'navigation.careers' | i18n}}"
+            >{{ 'navigation.careers' | i18n}}</a
+          >
+        </li>
+        <li><a href="{{otherLocale}}">{{ localeName }}</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
