@@ -8,9 +8,11 @@
   </head>
   <body>
     <div class="site-wrap">
+      {% include "header.html" %}
       <main id="main-content" tabindex="-1">
-        {% include "header.html" %} {%- block content %} {% endblock -%}
+        {%- block content %}{% endblock -%}
       </main>
+      {% include "footer.html" %}
     </div>
   </body>
 </html>
