@@ -39,7 +39,7 @@ module.exports = function (config) {
 
     dir: {
       input: 'src',
-      output: 'public',
+      output: 'src/_site',
       includes: '_includes',
       layouts: '_layouts',
       data: '_data',

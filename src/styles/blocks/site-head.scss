@@ -1,0 +1,31 @@
+.site-head {
+  padding: get-size('400') 0;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav {
+    padding: get-size('400') 0;
+  }
+
+  @media (orientation: landscape) {
+    &__inner {
+      padding: get-size('300') 0;
+      flex-direction: row;
+      box-shadow: 0 1px 0 var(--theme-color-fg);
+    }
+  }
+
+  // @include media-query('s') {
+  //   padding: get-size('500');
+  //   &__inner {
+  //     padding: get-size('300') 0;
+  //     flex-direction: row;
+  //     box-shadow: 0 1px 0 var(--theme-color-fg);
+  //   }
+  // }
+}

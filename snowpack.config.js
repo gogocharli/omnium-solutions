@@ -1,8 +1,9 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
   mount: {
-    public: { url: '/' },
-    src: { url: '/dist' },
+    'src/_site': { url: '/', static: true, resolve: false },
+    'src/styles': { url: '/styles' },
+    'src/scripts': { url: '/scripts' },
   },
   plugins: [
     [
@@ -12,17 +13,32 @@ module.exports = {
         watch: '$1 --watch',
       },
     ],
-    '@snowpack/plugin-postcss',
     [
       '@snowpack/plugin-sass',
       {
         native: true,
+        compilerOptions: {
+          style: 'expanded',
+        },
+      },
+    ],
+    [
+      '@snowpack/plugin-build-script',
+      {
+        input: ['.css'],
+        output: ['.css'],
+        cmd: 'npx postcss $file --replace --config postcss.config.js',
       },
     ],
   ],
+  alias: {
+    '@app': 'src',
+    node_modules: './node_modules',
+  },
   optimize: {
-    /* Example: Bundle your final build: */
-    // "bundle": true,
+    // bundle: true,
+    // minify: true,
+    // target: 'es2020',
   },
   packageOptions: {
     /* ... */
