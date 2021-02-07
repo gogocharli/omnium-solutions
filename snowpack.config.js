@@ -18,16 +18,8 @@ module.exports = {
       {
         native: true,
         compilerOptions: {
-          style: 'expanded',
+          loadPath: './node_modules/gorko/',
         },
-      },
-    ],
-    [
-      '@snowpack/plugin-build-script',
-      {
-        input: ['.css'],
-        output: ['.css'],
-        cmd: 'npx postcss $file --replace --config postcss.config.js',
       },
     ],
   ],
