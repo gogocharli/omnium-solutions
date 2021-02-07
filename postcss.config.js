@@ -14,4 +14,4 @@ if (!isDev) {
   ]);
 }
 
-module.exports = { plugins };
+module.exports = { map: true, plugins };

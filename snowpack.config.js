@@ -1,5 +1,5 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
-module.exports = {
+const config = {
   mount: {
     'src/_site': { url: '/', static: true, resolve: false },
     'src/styles': { url: '/styles' },
@@ -13,33 +13,42 @@ module.exports = {
         watch: '$1 --watch',
       },
     ],
-    [
-      '@snowpack/plugin-sass',
-      {
-        native: true,
-        compilerOptions: {
-          loadPath: './node_modules/gorko/',
-        },
-      },
-    ],
   ],
   alias: {
     '@app': 'src',
     node_modules: './node_modules',
   },
   optimize: {
-    // bundle: true,
-    // minify: true,
-    // target: 'es2020',
-  },
-  packageOptions: {
-    /* ... */
+    bundle: true,
+    minify: true,
+    target: 'es2020',
   },
   devOptions: {
     // Eleventy updates multiple files at once, so add a 300ms delay before we trigger a browser update
     hmrDelay: 300,
   },
-  buildOptions: {
-    /* ... */
-  },
 };
+
+// Use the offical sass plugin in dev mode
+if (process.env.NODE_ENV === 'development') {
+  config.plugins.push([
+    '@snowpack/plugin-sass',
+    {
+      native: true,
+      compilerOptions: {
+        loadPath: './node_modules/gorko/',
+      },
+    },
+  ]);
+} else {
+  // Use custom script to pipe sass output to postcss
+  config.plugins.push([
+    '@snowpack/plugin-run-script',
+    {
+      cmd:
+        'sass src/styles:build/styles --load-path="./node_modules/gorko/" --no-source-map | postcss build/styles --replace --config postcss.config.js',
+    },
+  ]);
+}
+
+module.exports = config;
