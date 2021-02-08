@@ -25,5 +25,6 @@
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.0.5",
     "snowpack": "^3.0.1"
-  }
+  },
+  "private": true
 }
