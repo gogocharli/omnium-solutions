@@ -61,7 +61,9 @@ h5 {
   @include apply-utility('leading', 'flat');
 }
 
+@import 'blocks/skip-link';
 @import 'blocks/site-head';
+@import 'blocks/nav';
 
 // Import utilities
 @import 'utilities/flow';
