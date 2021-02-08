@@ -1,11 +1,23 @@
 {% extends './base.html' %} {% block content %}
-<section class="hero">
-  <div class="hero__content">
-    <h1 class="hero__heading">{{ hero.title }}</h1>
-    <p class="hero__text">{{ hero.text }}</p>
+<section class="hero wrapper lg-grid">
+  <div class="hero__content flow">
+    <h1 class="[ hero__heading ] [ text-700 md:text-800 measure-micro ]">
+      {{ hero.title }}
+    </h1>
+    <p class="[ hero__text ] [ md:text-500 measure-short ]">{{ hero.text }}</p>
+    <form class="hero__form">
+      <label for="email-cta">
+        <input type="email" name="email-cta" id="email-cta" required />
+        <span class="text-300">{{ 'cta' | i18n }}</span>
+      </label>
+      <button type="submit">
+        <span class="visually-hidden">Send</span>{%- include
+        "icons/arrow-top-right-icon.svg" -%}
+      </button>
+    </form>
   </div>
 
-  <picture>
+  <picture class="hero__image">
     <source
       srcset="/static/illustrations/hero-img-large.svg"
       media="(min-width: 65em)"
@@ -14,20 +26,8 @@
       srcset="/static/illustrations/hero-img-mid.svg"
       media="(min-width: 50em)"
     />
-    <img
-      src="/static/illustrations/hero-img-small.svg"
-      alt=""
-      class="hero__image"
-    />
+    <img src="/static/illustrations/hero-img-small.svg" alt="" />
   </picture>
-
-  <form id="hero__form">
-    <label for="email-cta">
-      <span>{{ 'cta' | i18n }}</span>
-      <input type="email" name="email-cta" id="email-cta" />
-    </label>
-    <button type="submit">Send</button>
-  </form>
 </section>
 
 <article

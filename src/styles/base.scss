@@ -64,6 +64,7 @@ h5 {
 @import 'blocks/skip-link';
 @import 'blocks/site-head';
 @import 'blocks/nav';
+@import 'blocks/hero';
 
 // Import utilities
 @import 'utilities/flow';
@@ -72,5 +73,6 @@ h5 {
 @import 'utilities/visually-hidden';
 @import 'utilities/wrapper';
 @import 'utilities/auto-grid';
+@import 'utilities/explicit-grid';
 @import 'utilities/no-list';
 @import 'utilities/no-decoration';
