@@ -34,37 +34,40 @@
   id="{{ 'navigation.values' | i18n }}"
   class="[ values ] [ grid flow wrapper ]"
 >
-  <h2 class="values__title">{{'values.title' | i18n }}</h2>
-  <ul class="values__content">
-    <li class="value">
+  <h2 class="[ values__title ] [ text-550 md:text-600 ]">
+    <span class="text md:measure-micro">{{'values.title' | i18n }}</span>
+    <span class="line"></span>
+  </h2>
+  <ul class="[ values__content ] [ flow ]">
+    <li class="value flow">
       <div class="value__icon">{% include "icons/edit-icon.svg" %}</div>
       <h3 class="value__title">{{ 'values.detail' | i18n }}</h3>
-      <p class="value__text">{{ value.detail}}</p>
+      <p class="value__text text-300 md:text-400">{{ value.detail}}</p>
     </li>
-    <li class="value">
+    <li class="value flow">
       <div class="value__icon">{% include "icons/work-icon.svg" %}</div>
       <h3 class="value__title">{{ 'values.experience' | i18n }}</h3>
-      <p class="value__text">{{ value.experience }}</p>
+      <p class="value__text text-300 md:text-400">{{ value.experience }}</p>
     </li>
-    <li class="value">
+    <li class="value flow">
       <div class="value__icon">{% include "icons/filter-icon.svg" %}</div>
       <h3 class="value__title">{{ 'values.focus' | i18n }}</h3>
-      <p class="value__text">{{ value.focus }}</p>
+      <p class="value__text text-300 md:text-400">{{ value.focus }}</p>
     </li>
-    <li class="value">
+    <li class="value flow">
       <div class="value__icon">{% include "icons/show-icon.svg" %}</div>
       <h3 class="value__title">{{ 'values.transparent' | i18n }}</h3>
-      <p class="value__text">{{ value.transparent }}</p>
+      <p class="value__text text-300 md:text-400">{{ value.transparent }}</p>
     </li>
-    <li class="value">
+    <li class="value flow">
       <div class="value__icon">{% include "icons/discovery-icon.svg" %}</div>
       <h3 class="value__title">{{ 'values.inter' | i18n }}</h3>
-      <p class="value__text">{{ value.inter }}</p>
+      <p class="value__text text-300 md:text-400">{{ value.inter }}</p>
     </li>
-    <li class="value">
+    <li class="value flow">
       <div class="value__icon">{% include "icons/activity-icon.svg" %}</div>
       <h3 class="value__title">{{ 'values.results' | i18n }}</h3>
-      <p class="value__text">{{ value.results }}</p>
+      <p class="value__text text-300 md:text-400">{{ value.results }}</p>
     </li>
   </ul>
 </article>

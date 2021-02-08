@@ -51,7 +51,7 @@ module.exports = {
       fr: 'Multilingues',
     },
     results: {
-      en: 'Result—Oriented',
+      en: 'Result–Oriented',
       fr: 'Gagnants',
     },
   },

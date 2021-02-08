@@ -61,10 +61,15 @@ h5 {
   @include apply-utility('leading', 'flat');
 }
 
+article {
+  scroll-margin-top: 2ex;
+}
+
 @import 'blocks/skip-link';
 @import 'blocks/site-head';
 @import 'blocks/nav';
 @import 'blocks/hero';
+@import 'blocks/values';
 
 // Import utilities
 @import 'utilities/flow';
