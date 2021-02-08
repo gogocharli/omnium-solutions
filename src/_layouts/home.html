@@ -72,22 +72,33 @@
   </ul>
 </article>
 
-<article id="{{ 'navigation.focus' | i18n }}" class="focus">
+<article
+  id="{{ 'navigation.focus' | i18n }}"
+  class="[ focus ] [ flow wrapper ]"
+>
   <article class="product">
     <img src="/static/illustrations/product.svg" alt="" />
-    <h2 class="product__title">{{ 'focus.product' | i18n }}</h2>
-    <p>{{product.textA}}</p>
-    <p>{{product.textB}}</p>
+    <div class="product__content">
+      <h2 class="product__title text-550 md:text-600">
+        {{ 'focus.product' | i18n }}
+      </h2>
+      <p class="text-300 md:text-500 measure-short">{{product.textA}}</p>
+      <p class="text-300 md:text-500 measure-short">{{product.textB}}</p>
+    </div>
   </article>
   <article class="progress">
     <img src="/static/illustrations/progress.svg" alt="" />
-    <h2 class="progress__title">{{ 'focus.progress' | i18n }}</h2>
-    <p>{{progress.textA}}</p>
-    <p>{{progress.textB}}</p>
+    <div class="progres__content">
+      <h2 class="progress__title text-550 md:text-600">
+        {{ 'focus.progress' | i18n }}
+      </h2>
+      <p class="text-300 md:text-500 measure-short">{{progress.textA}}</p>
+      <p class="text-300 md:text-500 measure-short">{{progress.textB}}</p>
+    </div>
   </article>
 </article>
 
-<article id="{{ 'navigation.tools' | i18n }}" class="tools">
+<article id="{{ 'navigation.tools' | i18n }}" class="tools wrapper">
   <h2 class="tools__title">{{ 'tools' | i18n }}</h2>
   {% include "illustrations/salesforce.svg" %}
   <div class="tools__content">
@@ -97,7 +108,7 @@
   </div>
 </article>
 
-<article class="clients">
+<article class="clients wrapper">
   <h2 class="clients__title">{{ 'clients' | i18n }}</h2>
   <ul class="slides">
     {%- for client in caseStudies %}

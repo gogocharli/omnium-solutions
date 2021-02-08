@@ -61,6 +61,14 @@ h5 {
   @include apply-utility('leading', 'flat');
 }
 
+main {
+  --flow-space: 4em;
+
+  @include media-query('md') {
+    --flow-space: 6em;
+  }
+}
+
 article {
   scroll-margin-top: 2ex;
 }
@@ -70,6 +78,7 @@ article {
 @import 'blocks/nav';
 @import 'blocks/hero';
 @import 'blocks/values';
+@import 'blocks/focus';
 
 // Import utilities
 @import 'utilities/flow';
