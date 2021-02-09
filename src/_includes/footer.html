@@ -3,7 +3,9 @@
 'english' %}{% endif %}
 <footer class="site-foot wrapper">
   <div class="site-foot__content">
-    <p class="copyright">&copy; Omnium Concept Inc. 2005 - 2021</p>
+    <p class="copyright">
+      &copy; Omnium Concept Inc. 2005 - {{ helpers.currentYear() }}
+    </p>
     <nav class="site-foot__nav" aria-label="Secondary nav">
       <ul class="">
         <li>
