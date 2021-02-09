@@ -30,6 +30,7 @@ module.exports = function (config) {
 
   config.addPassthroughCopy('src/static');
   config.addPassthroughCopy('src/assets');
+  config.addPassthroughCopy('_redirects');
 
   return {
     markdownTemplateEngine: 'njk',
