@@ -19,9 +19,9 @@ const config = {
     node_modules: './node_modules',
   },
   optimize: {
-    bundle: true,
-    minify: true,
-    target: 'es2020',
+    // bundle: true,
+    // minify: true,
+    // target: 'es2020',
   },
   devOptions: {
     // Eleventy updates multiple files at once, so add a 300ms delay before we trigger a browser update
