@@ -99,12 +99,16 @@
 </article>
 
 <article id="{{ 'navigation.tools' | i18n }}" class="tools wrapper">
-  <h2 class="tools__title">{{ 'tools' | i18n }}</h2>
+  <h2 class="[ tools__title ] [ text-700 md:text-800 ]">
+    {{ 'tools' | i18n }}
+  </h2>
   {% include "illustrations/salesforce.svg" %}
-  <div class="tools__content">
-    <p>{{ tools.mainText }}</p>
-    <p>{{ tools.textA }}</p>
-    <p>{{ tools.textB }}</p>
+  <div class="tools__content flow">
+    <p class="text-500 md:text-550">{{ tools.mainText }}</p>
+    <div class="flow">
+      <p class="text-300 md:text-400">{{ tools.textA }}</p>
+      <p class="text-300 md:text-400">{{ tools.textB }}</p>
+    </div>
   </div>
 </article>
 

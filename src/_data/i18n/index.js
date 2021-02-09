@@ -58,7 +58,7 @@ module.exports = {
   focus: {
     product: {
       en: 'Focus on your product',
-      fr: 'Restez axés sur votre produit',
+      fr: 'Axés sur votre produit',
     },
     progress: {
       en: 'Follow your progress',
