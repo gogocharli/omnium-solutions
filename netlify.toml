@@ -1,8 +1,12 @@
 [build]
-publish = "build"
-command = "npm run build"
+  publish = "build"
+  command = "npm run build"
 
 [[plugins]]
-package = "netlify-plugin-subfont"
-[plugins.inputs]
-inlineCss = true
+  package = "netlify-plugin-subfont"
+  [plugins.inputs]
+    inlineCss = true
+
+[[plugins]]
+  package = "netlify-plugin-inline-critical-css"
+  
