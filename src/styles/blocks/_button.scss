@@ -1,0 +1,30 @@
+.button {
+  background-color: get-color('black');
+  color: get-color('white');
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  text-decoration: none;
+  text-align: center;
+
+  /* Makes light text on dark background better*/
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &:hover {
+    // Make sure hover state always applies
+    background-color: get-color('primary') !important;
+    color: get-color('white') !important;
+    border-color: get-color('primary') !important;
+  }
+
+  // Variant for secondary buttons (eg. forms)
+  &[data-variant='secondary'] {
+    background-color: get-color('white');
+    border: 1px solid get-color('black');
+    color: get-color('black');
+
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+  }
+}

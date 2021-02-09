@@ -56,6 +56,7 @@ h3,
 h4,
 h5 {
   color: get-color('black');
+  font-weight: 400; // Overwrite browser defaults
 
   @include apply-utility('font', 'bold');
   @include apply-utility('leading', 'flat');
@@ -73,6 +74,7 @@ article {
   scroll-margin-top: 2ex;
 }
 
+@import 'blocks/button';
 @import 'blocks/skip-link';
 @import 'blocks/site-head';
 @import 'blocks/nav';
@@ -82,6 +84,7 @@ article {
 @import 'blocks/tools';
 @import 'blocks/clients';
 @import 'blocks/slides';
+@import 'blocks/form';
 
 // Import utilities
 @import 'utilities/flow';

@@ -1,6 +1,8 @@
 <article class="form__container wrapper">
-  <h3 id="signup" class="[ form__title ] [ text-550 md:text-600 lg:text-700 ]">
-    <span class="form__subtitle">{{ 'form.subtitle' | i18n }}</span>
+  <h3 id="signup" class="[ form__title ] [ text-600 md:text-700 ]">
+    <span class="[ form__subtitle ] [ text-300 md:text-500 font-regular ]"
+      >{{ 'form.subtitle' | i18n }}</span
+    >
     {{ 'form.title' | i18n }}
   </h3>
   <div class="outline-container">
@@ -14,7 +16,13 @@
             <p class="[ example ] [ text-200 ]"></p>
           </template>
         </div>
-        <img src="/static/illustrations/analytics.svg" alt="" />
+        <picture>
+          <source
+            srcset="/static/illustrations/analytics.svg"
+            media="(min-width: 50em)"
+          />
+          <img src="" alt="" />
+        </picture>
       </div>
       {% endif %}
       <form
@@ -27,41 +35,44 @@
         <div class="field" data-field="0">
           <label for="fullName" class="text-300">
             <span class="field-label">{{ 'form.name' | i18n }}</span>
-            <span class="label-icon">
-              {% include 'icons/error-icon.svg' %}
-            </span>
           </label>
-          <input type="text" name="fullName" id="fullName" required />
+          <input
+            type="text"
+            name="fullName"
+            id="fullName"
+            autocomplete="name"
+            required
+          />
+          <span class="label-icon"> {% include 'icons/error-icon.svg' %} </span>
         </div>
 
         {% if formResume == false %}
         <div class="field" data-field="0">
           <label for="company" class="text-300">
             <span class="field-label">{{ 'form.company' | i18n }}</span>
-            <span class="label-icon">
-              {% include 'icons/error-icon.svg' %}
-            </span>
           </label>
           <input type="text" name="company" id="company" required />
+          <span class="label-icon"> {% include 'icons/error-icon.svg' %} </span>
         </div>
         {% endif %}
 
         <div class="field" data-field="1">
           <label for="email" class="text-300">
             <span class="field-label">{{ 'form.email' | i18n }}</span>
-            <span class="label-icon">
-              {% include 'icons/error-icon.svg' %}
-            </span>
           </label>
-          <input type="email" name="email" id="email" required />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            autocomplete="email"
+            required
+          />
+          <span class="label-icon"> {% include 'icons/error-icon.svg' %} </span>
         </div>
 
         <div class="field" data-field="2">
           <label for="phone" class="text-300">
             <span class="field-label">{{ 'form.phone' | i18n }}</span>
-            <span class="label-icon">
-              {% include 'icons/error-icon.svg' %}
-            </span>
           </label>
           <input
             type="text"
@@ -69,8 +80,10 @@
             pattern="[0-9]*"
             name="phone"
             id="phone"
+            autocomplete="tel"
             required
           />
+          <span class="label-icon"> {% include 'icons/error-icon.svg' %} </span>
         </div>
 
         {% if formResume == true %}
