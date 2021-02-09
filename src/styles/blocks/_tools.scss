@@ -25,12 +25,15 @@
   }
 
   @include media-query('md') {
+    &__title {
+      margin-bottom: get-size('600');
+    }
+
     &__content {
       --flow-space: #{get-size('500')};
       display: flex;
       flex-wrap: wrap;
-      margin-left: auto;
-      margin-right: auto;
+      margin: get-size('600') auto 0;
       max-width: 50rem;
 
       p:first-of-type {
@@ -53,6 +56,16 @@
       > div * {
         --flow-space: 0;
       }
+    }
+  }
+
+  @include media-query('lg') {
+    &__title {
+      margin-bottom: 2rem;
+    }
+
+    &__content {
+      margin-top: 3rem;
     }
   }
 }
