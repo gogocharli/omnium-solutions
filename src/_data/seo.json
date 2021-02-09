@@ -3,10 +3,10 @@
   "description": "Improve your sales by delegating them to experts.",
   "url": "https://solutions.omniumconcept.com",
   "author": "Natasha",
-  "image": "static/social-image.jpg",
+  "image": "https://solutions.omniumconcept.com/static/social-image.jpg",
   "options": {
     "titleStyle": "minimalistic",
     "titleDivider": "|",
-    "imageWithBaseUrl": true
+    "imageWithBaseUrl": false
   }
 }
