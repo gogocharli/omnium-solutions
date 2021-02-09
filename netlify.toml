@@ -2,8 +2,8 @@
 publish = "build"
 command = "npm run build"
 
-[[plugins]]
-package = "netlify-plugin-subfont"
+# [[plugins]]
+# package = "netlify-plugin-subfont"
 
 [[redirects]]
 from = "/"

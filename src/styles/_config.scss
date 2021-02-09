@@ -73,11 +73,6 @@ $gorko-config: (
     'output': 'standard',
     'property': 'font-family',
   ),
-  'gap-top': (
-    'items': $gorko-size-scale,
-    'output': 'responsive',
-    'property': 'margin-top',
-  ),
   'leading': (
     'items': (
       'loose': 1.5,
