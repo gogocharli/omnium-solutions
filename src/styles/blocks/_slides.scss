@@ -1,7 +1,8 @@
 .slides {
   display: flex;
   flex-flow: row nowrap;
-  overflow-x: hidden;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
 
   > * {
     flex: 1 0 100%;
@@ -10,6 +11,7 @@
   .slide {
     display: flex;
     flex-flow: row wrap;
+    scroll-snap-align: start;
 
     > * {
       align-self: start;
