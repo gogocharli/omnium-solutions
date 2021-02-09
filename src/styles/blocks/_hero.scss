@@ -57,7 +57,9 @@
       outline: none;
     }
 
-    input:focus ~ span {
+    /* Hide the "placeholder" when the input is focused or contains something */
+    input:focus ~ span,
+    input:not(:placeholder-shown) ~ span {
       transform: translate(0, 1em);
       opacity: 0;
     }

@@ -7,7 +7,13 @@
     <p class="[ hero__text ] [ md:text-500 measure-short ]">{{ hero.text }}</p>
     <form class="hero__form">
       <label for="email-cta">
-        <input type="email" name="email-cta" id="email-cta" required />
+        <input
+          type="email"
+          name="email-cta"
+          id="email-cta"
+          placeholder=""
+          required
+        />
         <span class="text-300">{{ 'cta' | i18n }}</span>
       </label>
       <button type="submit">
