@@ -46,7 +46,7 @@ if (process.env.NODE_ENV === 'development') {
     '@snowpack/plugin-run-script',
     {
       cmd:
-        'sass src/styles:build/styles --load-path="./node_modules/gorko/" --no-source-map | postcss build/styles --replace --config postcss.config.js',
+        'sass src/styles:build/styles --load-path="./node_modules/gorko/" --no-source-map && postcss build/styles --replace --config postcss.config.js',
     },
   ]);
 }
