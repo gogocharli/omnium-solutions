@@ -1,0 +1,19 @@
+{% extends './base.html' %} {% block content %}
+<article class="[ hero wrapper ] [ md-grid lg-grid ]">
+  <div class="hero__content flow">
+    <h1 class="[ hero__heading ] [ text-700 md:text-800 measure-micro ]">
+      {{ hero.title }}
+    </h1>
+    <div class="flow">
+      <p class="[ hero__text ] [ md:text-500 measure-short ]">
+        {{ hero.textA }}
+      </p>
+      <p class="[ hero__text ] [ md:text-500 measure-short ]">
+        {{ hero.textB }}
+      </p>
+    </div>
+  </div>
+  {% set formImage = false %} {% set formResume = true %} {% set formTitle =
+  false %} {% include "form.html" %}
+</article>
+{% endblock %}

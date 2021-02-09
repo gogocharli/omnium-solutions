@@ -1,10 +1,12 @@
 <article class="form__container wrapper">
+  {% if formTitle == true %}
   <h3 id="signup" class="[ form__title ] [ text-600 md:text-700 ]">
     <span class="[ form__subtitle ] [ text-300 md:text-500 font-regular ]"
       >{{ 'form.subtitle' | i18n }}</span
     >
     {{ 'form.title' | i18n }}
   </h3>
+  {% endif %}
   <div class="outline-container">
     <div class="form signup">
       {% if formImage == true %}
@@ -31,6 +33,7 @@
         method="POST"
         data-netlify="true"
         class="flow"
+        data-variant='{{ "full" if formImage == false }}'
       >
         <div class="field" data-field="0">
           <label for="fullName" class="text-300">

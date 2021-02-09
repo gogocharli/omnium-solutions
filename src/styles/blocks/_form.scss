@@ -194,6 +194,10 @@
     form {
       flex-basis: 56%;
       padding: 2em 2.75em;
+
+      &[data-variant='full'] {
+        flex-basis: 100%;
+      }
     }
 
     .field {
