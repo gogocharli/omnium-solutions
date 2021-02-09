@@ -1,0 +1,22 @@
+.clients {
+  &__title {
+    margin-bottom: 1rem;
+    text-align: center;
+
+    @include media-query('md') {
+      text-align: left;
+    }
+  }
+
+  @include media-query('lg') {
+    &__title {
+      grid-column: 1 / span 3;
+      grid-row: 1;
+    }
+
+    .slides {
+      grid-column: 3 / span 5;
+      grid-row: 2;
+    }
+  }
+}

@@ -118,16 +118,20 @@
   </div>
 </article>
 
-<article class="clients wrapper">
-  <h2 class="clients__title">{{ 'clients' | i18n }}</h2>
+<article class="[ clients ] [ wrapper lg-grid ]">
+  <h2 class="[ clients__title ] [ text-600 md:text-700 ]">
+    {{ 'clients' | i18n }}
+  </h2>
   <ul class="slides">
     {%- for client in caseStudies %}
     <li class="slide">
-      <p class="slide__text">{{ client.description }}</p>
+      <p class="[ slide__text ] [ text-550 md:text-700 ]">
+        {{ client.description }}
+      </p>
+      {% set company = client.company %} {% if client.company == 'c360hd' %} {%
+      include "logos/c360hd-logo.svg" %} {% elif client.company == 'firstData'
+      %} {% include "logos/firstData-logo.svg" %} {% endif %} {% endfor -%}
     </li>
-    {% set company = client.company %} {% if client.company == 'c360hd' %} {%
-    include "logos/c360hd-logo.svg" %} {% elif client.company == 'firstData' %}
-    {% include "logos/firstData-logo.svg" %} {% endif %} {% endfor -%}
   </ul>
 </article>
 
