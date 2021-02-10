@@ -1,5 +1,5 @@
 import { mount, unMount, hideScrollBar, showScrollBar } from './slider.js';
-import { mountFileInput, validateForm } from './forms/index.js';
+import { mountFileInput, validateForm, linkForms } from './forms/index.js';
 
 var lang = document.documentElement.lang;
 var mainForm = document.querySelector('.form form');
@@ -17,6 +17,7 @@ if (mq.matches) {
 if (!containsHelper) {
   mountFileInput();
 } else {
+  linkForms(mainForm);
   validateForm(mainForm, lang);
 }
 
