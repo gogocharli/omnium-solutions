@@ -203,6 +203,16 @@
       &[data-variant='full'] {
         flex-basis: 100%;
       }
+
+      &[data-size='full'] {
+        flex-basis: 100%;
+      }
+
+      &:not([data-size='full']) {
+        input[type='submit'] {
+          --flow-space: #{get-size('600')};
+        }
+      }
     }
 
     .field {
