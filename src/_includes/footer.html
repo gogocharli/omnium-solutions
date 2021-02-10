@@ -9,11 +9,11 @@
     <nav class="site-foot__nav" aria-label="Secondary nav">
       <ul class="">
         <li>
-          <a href="/{{ 'navigation.careers' | i18n}}"
+          <a href="{{seo.url}}/{{locale}}/{{ 'navigation.careers' | i18n }}/"
             >{{ 'navigation.careers' | i18n}}</a
           >
         </li>
-        <li><a href="{{seo.url}}/{{otherLocale}}">{{ localeName }}</a></li>
+        <li><a href="../{{otherLocale}}/">{{ localeName }}</a></li>
       </ul>
     </nav>
   </div>
