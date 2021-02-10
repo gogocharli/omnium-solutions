@@ -44,6 +44,7 @@
             name="fullName"
             id="fullName"
             autocomplete="name"
+            placeholder="John Doe"
             required
           />
           <span class="label-icon"> {% include 'icons/error-icon.svg' %} </span>
@@ -54,7 +55,13 @@
           <label for="company" class="text-300">
             <span class="field-label">{{ 'form.company' | i18n }}</span>
           </label>
-          <input type="text" name="company" id="company" required />
+          <input
+            type="text"
+            name="company"
+            id="company"
+            placeholder="Acme Inc"
+            required
+          />
           <span class="label-icon"> {% include 'icons/error-icon.svg' %} </span>
         </div>
         {% endif %}
@@ -68,6 +75,7 @@
             name="email"
             id="email"
             autocomplete="email"
+            placeholder="solutions@omniumconcept.com"
             required
           />
           <span class="label-icon"> {% include 'icons/error-icon.svg' %} </span>
@@ -84,6 +92,7 @@
             name="phone"
             id="phone"
             autocomplete="tel"
+            placeholder="8881234567"
             required
           />
           <span class="label-icon"> {% include 'icons/error-icon.svg' %} </span>

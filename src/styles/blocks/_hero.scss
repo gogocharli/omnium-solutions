@@ -53,18 +53,23 @@
       position: absolute;
       top: 0;
       width: 100%;
-    }
 
-    input:focus {
-      outline: none;
+      &:focus {
+        outline: none;
+      }
+
+      &:focus ~ span,
+      &:not(:placeholder-shown) ~ span {
+        transform: translate(0, 1em);
+        opacity: 0;
+      }
+
+      &::placeholder {
+        opacity: 0;
+      }
     }
 
     /* Hide the "placeholder" when the input is focused or contains something */
-    input:focus ~ span,
-    input:not(:placeholder-shown) ~ span {
-      transform: translate(0, 1em);
-      opacity: 0;
-    }
 
     label,
     input {

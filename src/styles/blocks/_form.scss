@@ -72,12 +72,17 @@
         box-shadow: 0 4px 0 get-color('primary');
         outline: none;
       }
-      &:invalid {
+
+      &::placeholder {
+        opacity: 0;
+      }
+
+      &:not(:placeholder-shown):invalid {
         border: 0 !important;
         box-shadow: 0 2px 0 get-color('error') !important;
       }
 
-      &:invalid ~ .label-icon {
+      &:not(:placeholder-shown):invalid ~ .label-icon {
         visibility: visible;
       }
     }
