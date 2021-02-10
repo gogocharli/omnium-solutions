@@ -19,6 +19,10 @@ body {
   @include apply-utility('font', 'regular');
 }
 
+::selection {
+  background: rgba(get-color('primary'), 0.4);
+}
+
 a:not([class]) {
   color: get-color('primary');
   text-decoration-color: get-color('primary');
