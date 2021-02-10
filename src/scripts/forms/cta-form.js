@@ -5,11 +5,16 @@ export function linkForms(mainForm) {
 
 function deferForm(handlerForm) {
   return function handleSubmit(event) {
+    // Populate email field and scroll to main form
     event.preventDefault();
     var formData = new FormData(event.target);
     var emailValue = formData.get('email-cta');
     var emailField = handlerForm.querySelector('input[type="email"]');
     emailField.value = emailValue;
-    handlerForm.querySelector('input:first-of-type').focus();
+    window.scrollTo({
+      top: handlerForm.getBoundingClientRect().top,
+      left: 0,
+      behavior: 'smooth',
+    });
   };
 }
