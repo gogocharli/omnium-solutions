@@ -1,0 +1,29 @@
+                            
+/* TEAM */
+
+                            
+Dev/Design: Charles De Mount Yahouedeou
+
+                            
+Site: thexrayone@icloud.com
+
+                            
+Twitter: @demountl.
+
+                            
+Location: Montreal, Canada.
+                      
+
+/* SITE */
+
+                            
+Last update: 2121/02/20
+
+                            
+Standards: HTML5, CSS3, SVG2
+
+                            
+Deploy: Netlify.
+
+                            
+Software: Eleventy, Snowpack, Sass
